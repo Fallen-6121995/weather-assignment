@@ -1,0 +1,67 @@
+﻿Weather Application
+
+Introduction
+
+This project is a weather application that allows users to search for weather information by city, view the current weather conditions, and manage a list of favorite cities.
+
+Setup and Running the Application
+
+Prerequisites
+
+- Node.js**: Ensure Node.js is installed. [Download Node.js](https://nodejs.org/).
+- npm: Node.js includes npm (Node Package Manager). Verify its installation by running `npm -v`.
+
+Installation
+
+1. unzip the project
+
+2. Install Dependencies
+	npm install
+
+3. Running the Application
+To start the development server, use:
+	npm run dev	
+The application will be accessible at http://localhost:5173/
+
+
+Code Structure
+App.js
+States:
+
+city: The currently selected city.
+weatherData: Stores the fetched weather data.
+loading: A boolean indicating whether data is being loaded.
+error: Stores any error message related to data fetching.
+favorites: Stores the list of favorite cities.
+useEffect Hook:
+
+Loads favorite cities from localStorage when the component is first rendered.
+
+Functions:
+
+fetchWeather: Fetches weather data for a selected city.
+
+handleSelectCity: Handles city selection from the Autocomplete component.
+
+handleFavoriteToggle: Adds or removes a city from the favorites list.
+
+Other Components
+
+Autocomplete.js: Component for city selection and providing suggestions according to city name.
+
+InfoCard.js: Component for displaying additional weather information.
+
+FavcityCard.js: Component for displaying a favorite city and fetching that city’s weather when clicked.
+
+Design Patterns
+Component-Based Architecture: Utilizes reusable components (Autocomplete, InfoCard, FavcityCard) to encapsulate functionalities and UI elements.
+
+State Management: Uses React's useState and useEffect hooks for managing state and side effects.
+
+Error Handling: Basic error handling in the fetchWeather function to manage failed API requests.
+
+LocalStorage for Persistence: Stores and retrieves favorite cities from localStorage to maintain user preferences.
+
+
+
+
